@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "imgURL": "/images/products/vegetables/01-Cucumber.webp",
+    "price": 10,
+    "title": "Cucumber",
+    "category": "vegetables"
+  },
+  {
+    "id": 2,
+    "imgURL": "images/products/vegetables/02-Beetroot.webp",
+    "price": 20,
+    "title": "Beetroot",
+    "category": "vegetables"
+  },
+  {
+    "id": 3,
+    "imgURL": "images/products/vegetables/03-Carrot.webp",
+    "price": 15,
+    "title": "Carrot",
+    "category": "vegetables"
+  },
+  {
+    "id": 4,
+    "imgURL": "images/products/vegetables/04-Cored Eggplant.webp",
+    "price": 30,
+    "title": "Cored Eggplant",
+    "category": "vegetables"
+  },
+  {
+    "id": 5,
+    "imgURL": "images/products/vegetables/05-Coriander.webp",
+    "price": 4,
+    "title": "Coriander",
+    "category": "vegetables"
+  },
+  {
+    "id": 6,
+    "imgURL": "images/products/vegetables/06-Green Capsicum.webp",
+    "price": 7,
+    "title": "Green Capsicum",
+    "category": "vegetables"
+  },
+  {
+    "id": 7,
+    "imgURL": "images/products/vegetables/07-Green Onion.webp",
+    "price": 5,
+    "title": "Green Onion",
+    "category": "vegetables"
+  },
+  {
+    "id": 8,
+    "imgURL": "images/products/vegetables/08-Lebanese Wide Green Beans.webp",
+    "price": 40,
+    "title": "Lebanese Wide Green Beans",
+    "category": "vegetables"
+  },
+  {
+    "id": 9,
+    "imgURL": "images/products/vegetables/09-Lemon.webp",
+    "price": 35,
+    "title": "Lemon",
+    "category": "vegetables"
+  },
+  {
+    "id": 10,
+    "imgURL": "images/products/vegetables/10-Lettuce.webp",
+    "price": 4,
+    "title": "Lettuce",
+    "category": "vegetables"
+  },
+  {
+    "id": 11,
+    "imgURL": "images/products/vegetables/11-Marrow Cored.webp",
+    "price": 45,
+    "title": "Marrow Cored",
+    "category": "vegetables"
+  },
+  {
+    "id": 12,
+    "imgURL": "images/products/vegetables/12-Marrow Lebanese.jpeg",
+    "price": 30,
+    "title": "Marrow Lebanese ",
+    "category": "vegetables"
+  },
+  {
+    "id": 13,
+    "imgURL": "images/products/vegetables/13-Baby Carrot.webp",
+    "price": 45,
+    "title": "Baby Carrot",
+    "category": "vegetables"
+  },
+  {
+    "id": 14,
+    "imgURL": "images/products/vegetables/14-Beans Green.jpeg",
+    "price": 20,
+    "title": "Beans Green",
+    "category": "vegetables"
+  },
+  {
+    "id": 15,
+    "imgURL": "images/products/vegetables/15-Broccoli.jpeg",
+    "price": 35,
+    "title": "Broccoli",
+    "category": "vegetables"
+  },
+  {
+    "id": 16,
+    "imgURL": "images/products/vegetables/16-Cabbage Big Flat.webp",
+    "price": 15,
+    "title": "Cabbage Big Flat",
+    "category": "vegetables"
+  },
+  {
+    "id": 17,
+    "imgURL": "images/products/vegetables/17-Capsicum Red.webp",
+    "price": 60,
+    "title": "Capsicum Red",
+    "category": "vegetables"
+  },
+  {
+    "id": 18,
+    "imgURL": "images/products/vegetables/18-Capsicum Yellow.jpg",
+    "price": 60,
+    "title": "Capsicum Yellow",
+    "category": "vegetables"
+  },
+  {
+    "id": 19,
+    "imgURL": "images/products/vegetables/19-Cauliflower.jpeg",
+    "price": 30,
+    "title": "Cauliflower",
+    "category": "vegetables"
+  },
+  {
+    "id": 20,
+    "imgURL": "images/products/vegetables/20-Celery.webp",
+    "price": 4,
+    "title": "Celery",
+    "category": "vegetables"
+  },
+  {
+    "id": 21,
+    "imgURL": "images/products/vegetables/21-Colored Capsicum.webp",
+    "price": 70,
+    "title": "Colored Capsicum ",
+    "category": "vegetables"
+  },
+  {
+    "id": 22,
+    "imgURL": "images/products/vegetables/22-Shabat.webp",
+    "price": 4,
+    "title": "Shabat",
+    "category": "vegetables"
+  },
+  {
+    "id": 23,
+    "imgURL": "images/products/vegetables/23-Eggplant.webp",
+    "price": 25,
+    "title": "Eggplant",
+    "category": "vegetables"
+  },
+  {
+    "id": 24,
+    "imgURL": "images/products/vegetables/24-Potato egypt.jpeg",
+    "price": 180,
+    "title": "Fresh pistachio",
+    "category": "vegetables"
+  }
+]
