@@ -1,7 +1,10 @@
+import Products from "../components/shop-page/Products";
 
 function Shop() {
   return (
-    <div>Shop</div>
+    <main className="overflow-hidden">
+      <Products />
+    </main>
   )
 }
 

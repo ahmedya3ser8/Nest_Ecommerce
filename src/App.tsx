@@ -9,11 +9,14 @@ import Wishlist from './pages/Wishlist';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Layout from './global/Layout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
   return (
     <>
+      <ToastContainer />
       <Routes>
         <Route path='/' element={<Layout />} >
           <Route index element={<Home />} />

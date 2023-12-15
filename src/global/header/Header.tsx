@@ -2,6 +2,8 @@ import {FaCartShopping, FaHeart, FaUser} from 'react-icons/fa6';
 import { AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../rtk/store';
 
 
 function Header() {
@@ -15,6 +17,9 @@ function Header() {
 
   const [menu, setMenu] = useState<boolean>(false);
   const toggleMenu = () => setMenu(!menu);
+
+  const cart = useSelector((state: RootState) => state.cart.cartItems);
+  const wishlist = useSelector((state: RootState) => state.wishlist.wishlistItems);
   
   return (
     <header className="p-5 h-18 bg-[#eee]">
@@ -38,13 +43,13 @@ function Header() {
             <Link to={'cart'} title="cart">
               <div className="bg-white rounded-full p-[10px] relative">
                 <FaCartShopping />
-                <span className="absolute top-[-10px] left-[40%] w-5 h-5 rounded-full bg-[#3cb47c] text-white text-[14px] flex items-center justify-center">2</span>
+                <span className="absolute top-[-10px] left-[40%] w-5 h-5 rounded-full bg-[#3cb47c] text-white text-[14px] flex items-center justify-center">{cart.length}</span>
               </div>
             </Link>
             <Link to={'wishlist'} title="wishlist">
               <div className="bg-white rounded-full p-[10px] relative">
                 <FaHeart />
-                <span className="absolute top-[-10px] left-[40%] w-5 h-5 rounded-full bg-[#3cb47c] text-white text-[14px] flex items-center justify-center">1</span>
+                <span className="absolute top-[-10px] left-[40%] w-5 h-5 rounded-full bg-[#3cb47c] text-white text-[14px] flex items-center justify-center">{wishlist.length}</span>
               </div>
             </Link>
             <Link to={'register'} title="register">

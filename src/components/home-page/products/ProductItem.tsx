@@ -1,5 +1,7 @@
 import { IoEyeSharp } from "react-icons/io5";
 import { FaStar, FaHeart, FaShuffle, FaCartShopping } from "react-icons/fa6";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../rtk/slices/cartReducer";
 
 function ProductItem() {
   const productsItems = [
@@ -8,6 +10,7 @@ function ProductItem() {
     {id: 300, num: 780, imgURL: '/images/home-products/Abu Auf Protein Bar Cranberries + Coconut, 70 Gm.jpg', title: 'Abu Auf Protein Bar Cranberries + Coconut, 70 Gm', price: 60},
     {id: 400, num: 360, imgURL: '/images/home-products/Almarai Full Cream Milk - 1L.webp', title: 'Almarai Full Cream Milk - 1L', price: 15},
   ]
+  const dispatch = useDispatch();
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       {productsItems.map(product => (
@@ -26,7 +29,7 @@ function ProductItem() {
               <p className="text-[15px] text-[#777] text-center">{product.title}</p>
             </div>
             <span className="block text-green-500 text-[25px] font-bold mb-1">{`$${product.price}`}</span>
-            <button className="p-[10px] bg-green-500 text-white mb-3 rounded-[10px] flex items-center gap-2">
+            <button className="p-[10px] bg-green-500 text-white mb-3 rounded-[10px] flex items-center gap-2" onClick={() => dispatch(addToCart(product))}>
               <FaCartShopping />
               add to cart
             </button>
