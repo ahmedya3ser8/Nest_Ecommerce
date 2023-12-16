@@ -1,11 +1,3 @@
-export type Tproducts = {
-  id: number,
-  num: number,
-  imgURL: string,
-  title: string,
-  price: number,
-}[]
-
 export type cartType = {
   id: number,
   imgURL: string,
@@ -22,12 +14,4 @@ export type wishlistType = {
   price: number
   category: string,
   quantity: number
-}
-
-export type Tproduct = {
-  id: number,
-  imgURL: string,
-  title: string,
-  price: number,
-  category: string,
 }

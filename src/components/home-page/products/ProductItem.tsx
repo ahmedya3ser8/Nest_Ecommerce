@@ -4,25 +4,24 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../../rtk/slices/cartReducer";
 import { addToWishlist } from "../../../rtk/slices/wishlistReducer";
 import { AppDispatch } from "../../../rtk/store";
-import { Tproducts } from "../../../types/app";
 
 
 function ProductItem() {
-  const productsItems: Tproducts = [
-    {id: 100, num: 255, imgURL: '/images/home-products/Almarai Full Cream Milk - 1L.webp', title: 'Almarai Full Cream Milk - 1L', price: 15},
-    {id: 200, num: 300, imgURL: '/images/home-products/Al Watania Chicken Liver & Gizzard - 1K.webp', title: 'Al Watania Chicken Liver & Gizzard - 1K', price: 100},
-    {id: 300, num: 780, imgURL: '/images/home-products/Abu Auf Protein Bar Cranberries + Coconut, 70 Gm.jpg', title: 'Abu Auf Protein Bar Cranberries + Coconut, 70 Gm', price: 60},
-    {id: 400, num: 360, imgURL: '/images/home-products/Almarai Full Cream Milk - 1L.webp', title: 'Almarai Full Cream Milk - 1L', price: 15},
+  const productsItems = [
+    {id: 100, num: 255, imgURL: '/images/home-products/Almarai Full Cream Milk - 1L.webp', title: 'Almarai Full Cream Milk - 1L', price: 15, category: 'vegetables', quantity: 1},
+    {id: 200, num: 300, imgURL: '/images/home-products/Al Watania Chicken Liver & Gizzard - 1K.webp', title: 'Al Watania Chicken Liver & Gizzard - 1K', price: 100, category: 'vegetables', quantity: 1},
+    {id: 300, num: 780, imgURL: '/images/home-products/Abu Auf Protein Bar Cranberries + Coconut, 70 Gm.jpg', title: 'Abu Auf Protein Bar Cranberries + Coconut, 70 Gm', price: 60, category: 'vegetables', quantity: 1},
+    {id: 400, num: 360, imgURL: '/images/home-products/Almarai Full Cream Milk - 1L.webp', title: 'Almarai Full Cream Milk - 1L', price: 15, category: 'vegetables', quantity: 1},
   ]
   const dispatch = useDispatch<AppDispatch>();
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-      {productsItems.map(product => (
-        <div className="bg-white p-5 flex flex-col justify-between rounded-[10px]" key={product.id}>
+      {productsItems.map(({id, num, imgURL, title, price, category, quantity}) => (
+        <div className="bg-white p-5 flex flex-col justify-between rounded-[10px]" key={id}>
           <div className="head">
-            <span className="block mb-2 bg-[#1494a9] text-white w-fit p-[5px_8px] rounded-[10px]">{product.num}</span>
+            <span className="block mb-2 bg-[#1494a9] text-white w-fit p-[5px_8px] rounded-[10px]">{num}</span>
             <div className="flex items-center justify-center flex-col gap-2">
-              <img src={product.imgURL} alt="product-img" className="w-[140px] h-[140px]" />
+              <img src={imgURL} alt="product-img" className="w-[140px] h-[140px]" />
               <div className="stars flex gap-1 mb-3 text-[#666]">
                 <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStar />
               </div>
@@ -30,10 +29,10 @@ function ProductItem() {
           </div>
           <div className="body flex items-center justify-center flex-col">
             <div className="h-20">
-              <p className="text-[15px] text-[#777] text-center">{product.title}</p>
+              <p className="text-[15px] text-[#777] text-center">{title}</p>
             </div>
-            <span className="block text-green-500 text-[25px] font-bold mb-1">{`$${product.price}`}</span>
-            <button className="p-[10px] bg-green-500 text-white mb-3 rounded-[10px] flex items-center gap-2" onClick={() => dispatch(addToCart(product))}>
+            <span className="block text-green-500 text-[25px] font-bold mb-1">{`$${price}`}</span>
+            <button className="p-[10px] bg-green-500 text-white mb-3 rounded-[10px] flex items-center gap-2" onClick={() => dispatch(addToCart({id, imgURL, title, price, category, quantity}))}>
               <FaCartShopping />
               add to cart
             </button>
@@ -41,7 +40,7 @@ function ProductItem() {
               <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]" >
                 <IoEyeSharp />
               </div>
-              <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]" onClick={() => dispatch(addToWishlist(product))} >
+              <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]" onClick={() => dispatch(addToWishlist({id, imgURL, title, price, category, quantity}))} >
                 <FaHeart />
               </div>
               <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]">
