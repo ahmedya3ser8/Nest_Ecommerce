@@ -4,6 +4,7 @@ import products from '../../data/products.json';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../rtk/slices/cartReducer";
 import { addToWishlist } from "../../rtk/slices/wishlistReducer";
+import { Tproduct } from "../../types/app";
 
 function Products() {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ function Products() {
     <section className="py-12">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {products.map(product => (
+          {products.map((product: Tproduct) => (
             <div className="box p-5 flex flex-col justify-between border-[1px] border-solid border-[#00000017] rounded-[10px]" key={product.id}>
               <div className="head">
                 <div className="flex items-center justify-center flex-col gap-2">
