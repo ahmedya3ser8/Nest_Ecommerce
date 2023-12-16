@@ -1,7 +1,10 @@
+import BlogItems from "../components/blog-page/BlogItems";
 
 function Blog() {
   return (
-    <div>Blog</div>
+    <main className="overflow-hidden">
+      <BlogItems />
+    </main>
   )
 }
 

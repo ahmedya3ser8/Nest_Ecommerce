@@ -2,6 +2,7 @@ import { IoEyeSharp } from "react-icons/io5";
 import { FaStar, FaHeart, FaShuffle, FaCartShopping } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../rtk/slices/cartReducer";
+import { addToWishlist } from "../../../rtk/slices/wishlistReducer";
 
 function ProductItem() {
   const productsItems = [
@@ -15,7 +16,7 @@ function ProductItem() {
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       {productsItems.map(product => (
         <div className="bg-white p-5 flex flex-col justify-between rounded-[10px]" key={product.id}>
-          <div className="top">
+          <div className="head">
             <span className="block mb-2 bg-[#1494a9] text-white w-fit p-[5px_8px] rounded-[10px]">{product.num}</span>
             <div className="flex items-center justify-center flex-col gap-2">
               <img src={product.imgURL} alt="product-img" className="w-[140px] h-[140px]" />
@@ -24,7 +25,7 @@ function ProductItem() {
               </div>
             </div>
           </div>
-          <div className="bottom flex items-center justify-center flex-col">
+          <div className="body flex items-center justify-center flex-col">
             <div className="h-20">
               <p className="text-[15px] text-[#777] text-center">{product.title}</p>
             </div>
@@ -37,7 +38,7 @@ function ProductItem() {
               <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]" >
                 <IoEyeSharp />
               </div>
-              <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]" >
+              <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]" onClick={() => dispatch(addToWishlist(product))} >
                 <FaHeart />
               </div>
               <div className="p-[10px] border-[1px] border-solid border-[#00000017] cursor-pointer transition-colors duration-300 hover:text-[#fdc040]">
