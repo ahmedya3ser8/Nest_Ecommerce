@@ -1,7 +1,10 @@
+import CartProducts from "../components/cart-page/CartProducts";
 
 function Cart() {
   return (
-    <div>Cart</div>
+    <main className="overflow-hidden">
+      <CartProducts />
+    </main>
   )
 }
 
