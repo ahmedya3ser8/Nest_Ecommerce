@@ -3,7 +3,8 @@ export type Tproducts = {
   num: number,
   imgURL: string,
   title: string,
-  price: number
+  price: number,
+  quantity?: number
 }[]
 
 export type cartType = {
@@ -20,8 +21,8 @@ export type wishlistType = {
   imgURL: string,
   title: string,
   price: number
-  category: string,
-  quantity: number
+  category?: string,
+  quantity?: number
 }
 
 export type Tproduct = {
@@ -30,4 +31,5 @@ export type Tproduct = {
   title: string,
   price: number,
   category: string,
+  quantity?: number
 }
