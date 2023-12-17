@@ -5,15 +5,14 @@ import { addToCart } from "../../../rtk/slices/cartReducer";
 import { addToWishlist } from "../../../rtk/slices/wishlistReducer";
 import { AppDispatch } from "../../../rtk/store";
 
-
 function ProductItem() {
   const productsItems = [
-    {id: 100, num: 255, imgURL: '/images/home-products/Almarai Full Cream Milk - 1L.webp', title: 'Almarai Full Cream Milk - 1L', price: 15, category: 'vegetables', quantity: 1},
-    {id: 200, num: 300, imgURL: '/images/home-products/Al Watania Chicken Liver & Gizzard - 1K.webp', title: 'Al Watania Chicken Liver & Gizzard - 1K', price: 100, category: 'vegetables', quantity: 1},
-    {id: 300, num: 780, imgURL: '/images/home-products/Abu Auf Protein Bar Cranberries + Coconut, 70 Gm.jpg', title: 'Abu Auf Protein Bar Cranberries + Coconut, 70 Gm', price: 60, category: 'vegetables', quantity: 1},
-    {id: 400, num: 360, imgURL: '/images/home-products/Almarai Full Cream Milk - 1L.webp', title: 'Almarai Full Cream Milk - 1L', price: 15, category: 'vegetables', quantity: 1},
+    {id: 100, num: 255, imgURL: '/images/home-products/cream-milk.webp', title: 'Almarai Full Cream Milk - 1L', price: 15, category: 'vegetables', quantity: 1},
+    {id: 200, num: 300, imgURL: '/images/home-products/chicken-liver.webp', title: 'Al Watania Chicken Liver & Gizzard - 1K', price: 100, category: 'vegetables', quantity: 1},
+    {id: 300, num: 780, imgURL: '/images/home-products/abu-auf.jpg', title: 'Abu Auf Protein Bar Cranberries + Coconut, 70 Gm', price: 60, category: 'vegetables', quantity: 1},
+    {id: 400, num: 360, imgURL: '/images/home-products/Fayrouz-Apple-Malt-Drink.webp', title: 'Fayrouz Apple Malt Drink', price: 25, category: 'vegetables', quantity: 1},
   ]
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch<AppDispatch>();  
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       {productsItems.map(({id, num, imgURL, title, price, category, quantity}) => (
